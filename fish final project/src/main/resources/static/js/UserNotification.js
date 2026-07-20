@@ -12,7 +12,7 @@ async function loadNotifications(){
 
     const response =
         await fetch(
-            `http://localhost:9090/api/notifications/${userId}`,
+            `${BASE_URL}/api/notifications/${userId}`,
             {
                 headers:{
                     Authorization:

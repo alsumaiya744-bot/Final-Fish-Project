@@ -33,7 +33,7 @@ async function loadReport(){
 
     const response =
         await fetch(
-            `http://localhost:9090/api/reports?startDate=${startDate}&endDate=${endDate}`,
+            `${BASE_URL}/api/reports?startDate=${startDate}&endDate=${endDate}`,
             {
                 headers:{
                     Authorization:
@@ -108,7 +108,7 @@ document.getElementById(
         }
 
         window.open(
-            `http://localhost:9090/api/reports/pdf?startDate=${startDate}&endDate=${endDate}`
+            `${BASE_URL}/api/reports/pdf?startDate=${startDate}&endDate=${endDate}`
         );
     }
 );

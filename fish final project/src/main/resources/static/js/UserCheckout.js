@@ -43,7 +43,7 @@ async function loadCart() {
 
     const response =
         await fetch(
-            `http://localhost:9090/api/cart/${userId}`,
+            `${BASE_URL}/api/cart/${userId}`,
             {
                 headers: {
                     Authorization:
@@ -325,7 +325,7 @@ let grandTotal =
 };
     const response =
         await fetch(
-            "http://localhost:9090/api/orders",
+            "${BASE_URL}/api/orders",
             {
                 method:
                     "POST",

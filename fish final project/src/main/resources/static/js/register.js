@@ -261,7 +261,7 @@ async function registerUser(
 
         const response =
             await fetch(
-                "http://localhost:9090/api/auth/register",
+                "${BASE_URL}/api/auth/register",
                 {
                     method:
                         "POST",

@@ -11,7 +11,7 @@ async function loadExpenses() {
 
    const response =
     await fetch(
-        "http://localhost:9090/api/expenses",
+        "${BASE_URL}/api/expenses",
         {
             headers: {
                 Authorization:
@@ -129,7 +129,7 @@ async function saveExpense() {
 
     const response =
         await fetch(
-            "http://localhost:9090/api/expenses",
+            "${BASE_URL}/api/expenses",
             {
                 method: "POST",
 
@@ -253,7 +253,7 @@ async function updateExpense() {
 
     const response =
         await fetch(
-            `http://localhost:9090/api/expenses/${currentExpenseId}`,
+            `${BASE_URL}/api/expenses/${currentExpenseId}`,
             {
                 method: "PUT",
 headers: {
@@ -302,7 +302,7 @@ async function deleteExpense(
 
     const response =
         await fetch(
-            `http://localhost:9090/api/expenses/${expenseId}`,
+            `${BASE_URL}/api/expenses/${expenseId}`,
             {
                 method: "DELETE",
                 headers: {

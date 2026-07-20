@@ -11,7 +11,7 @@ async function loadCustomers() {
 
         const response =
     await fetch(
-        "http://localhost:9090/api/customers",
+        "${BASE_URL}/api/customers",
         {
             headers: {
                 Authorization:
@@ -217,7 +217,7 @@ async function updateCustomer() {
 
         const response =
             await fetch(
-                `http://localhost:9090/api/customers/${selectedCustomerId}`,
+                `${BASE_URL}/api/customers/${selectedCustomerId}`,
                 {
                     method: "PUT",
                     headers: {
@@ -282,7 +282,7 @@ async function deleteCustomer() {
 
         const response =
             await fetch(
-                `http://localhost:9090/api/customers/${selectedCustomerId}`,
+                `${BASE_URL}/api/customers/${selectedCustomerId}`,
                 {
                     method: "DELETE",
                     headers: {

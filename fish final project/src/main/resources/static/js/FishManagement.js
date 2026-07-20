@@ -11,7 +11,7 @@ async function loadFishes() {
 
         const response =
     await fetch(
-        "http://localhost:9090/api/fishes",
+        "${BASE_URL}/api/fishes",
         {
             headers: {
                 Authorization:
@@ -194,7 +194,7 @@ formData.append(
 
         const response =
             await fetch(
-                "http://localhost:9090/api/fishes",
+                "${BASE_URL}/api/fishes",
                 {
                     method: "POST",
                     headers: {
@@ -272,7 +272,7 @@ async function updateFish() {
 
         const uploadResponse =
             await fetch(
-                "http://localhost:9090/api/fishes/upload",
+                "${BASE_URL}/api/fishes/upload",
                 {
                     method: "POST",
                     headers: {
@@ -324,7 +324,7 @@ sellingPrice:
 
         const response =
             await fetch(
-                `http://localhost:9090/api/fishes/${selectedFishId}`,
+                `${BASE_URL}/api/fishes/${selectedFishId}`,
                 {
                     method: "PUT",
                     headers: {
@@ -380,7 +380,7 @@ async function deleteFish() {
 
         const response =
     await fetch(
-        `http://localhost:9090/api/fishes/${selectedFishId}`,
+        `${BASE_URL}/api/fishes/${selectedFishId}`,
         {
             method: "DELETE",
             headers: {
@@ -456,7 +456,7 @@ function displayFish() {
 <div class="fish-card">
 
     <img
-        src="http://localhost:9090/uploads/${fish.imagePath}"
+        src="${BASE_URL}/uploads/${fish.imagePath}"
         width="150">
 
     <div class="fish-card-body">

@@ -16,7 +16,7 @@ async function loadDeliveries(){
 
     const response =
         await fetch(
-            "http://localhost:9090/api/orders",
+            "${BASE_URL}/api/orders",
             {
                 headers:{
                     Authorization:
@@ -265,7 +265,7 @@ async function updateStatus(){
 
     const response =
         await fetch(
-            `http://localhost:9090/api/orders/${currentOrderId}/status?status=${status}`,
+            `${BASE_URL}/api/orders/${currentOrderId}/status?status=${status}`,
             {
                 method:"PUT",
 

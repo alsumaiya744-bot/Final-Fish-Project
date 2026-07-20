@@ -16,7 +16,7 @@ async function loadOrders() {
 
     const response =
         await fetch(
-            `http://localhost:9090/api/orders/user/${userId}`,
+            `${BASE_URL}/api/orders/user/${userId}`,
             {
                 headers: {
                     Authorization:
@@ -320,7 +320,7 @@ async function cancelOrder(
 
     const response =
         await fetch(
-            `http://localhost:9090/api/orders/cancel/${orderId}`,
+            `${BASE_URL}/api/orders/cancel/${orderId}`,
             {
                 method: "PUT",
 

@@ -31,7 +31,7 @@ async function loadCart() {
 
         const response =
             await fetch(
-                `http://localhost:9090/api/cart/${userId}`,
+                `${BASE_URL}/api/cart/${userId}`,
                 {
                     headers: {
                         Authorization:
@@ -101,7 +101,7 @@ function displayCart() {
         <div class="cart-card">
 
             <img
-                src="http://localhost:9090/uploads/${item.imagePath}">
+                src="${BASE_URL}/uploads/${item.imagePath}">
 
             <div class="cart-info">
 
@@ -184,7 +184,7 @@ async function removeItem(
 
         const response =
             await fetch(
-                `http://localhost:9090/api/cart/${cartId}`,
+                `${BASE_URL}/api/cart/${cartId}`,
                 {
                     method:
                         "DELETE",
@@ -256,7 +256,7 @@ async function updateQuantity(
 
         const response =
             await fetch(
-                `http://localhost:9090/api/cart/${cartId}`,
+                `${BASE_URL}/api/cart/${cartId}`,
                 {
                     method:
                         "PUT",

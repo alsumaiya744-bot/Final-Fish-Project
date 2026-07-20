@@ -16,7 +16,7 @@ async function loadHome() {
 
 const response =
     await fetch(
-        `http://localhost:9090/api/user-home/${userId}`,
+        `${BASE_URL}/api/user-home/${userId}`,
         {
             headers: {
                 Authorization:
@@ -101,7 +101,7 @@ function displayFish(data) {
         <div class="fish-card">
 
             <img
-               src="http://localhost:9090/uploads/${fish.imagePath}"
+               src="${BASE_URL}/uploads/${fish.imagePath}"
                 alt="${fish.fishName}">
 
             <div class="fish-info">
@@ -231,7 +231,7 @@ async function addToCart(fishId) {
 
         const response =
             await fetch(
-                "http://localhost:9090/api/cart",
+                "${BASE_URL}/api/cart",
                 {
                     method: "POST",
 

@@ -17,7 +17,7 @@ async function loadFishIds() {
 
         const response =
     await fetch(
-        "http://localhost:9090/api/fishes",
+        "${BASE_URL}/api/fishes",
         {
             headers: {
                 Authorization:
@@ -59,7 +59,7 @@ async function loadProcurements() {
 
         const response =
     await fetch(
-        "http://localhost:9090/api/procurements",
+        "${BASE_URL}/api/procurements",
         {
             headers: {
                 Authorization:
@@ -328,7 +328,7 @@ sellingPrice:
 
             const fishResponse =
                 await fetch(
-                    "http://localhost:9090/api/fishes/simple",
+                    "${BASE_URL}/api/fishes/simple",
                     {
                         method: "POST",
                         headers: {
@@ -408,7 +408,7 @@ sellingPrice:
 
         const response =
             await fetch(
-                "http://localhost:9090/api/procurements",
+                "${BASE_URL}/api/procurements",
                 {
                     method: "POST",
                      headers: {
@@ -538,7 +538,7 @@ if (phone.length !== 10) {
 
         const response =
             await fetch(
-                `http://localhost:9090/api/procurements/${selectedProcurementId}`,
+                `${BASE_URL}/api/procurements/${selectedProcurementId}`,
                 {
                     method: "PUT",
                     headers: {
@@ -587,7 +587,7 @@ document.getElementById(
         }
 
         await fetch(
-    `http://localhost:9090/api/procurements/${selectedProcurementId}`,
+    `${BASE_URL}/api/procurements/${selectedProcurementId}`,
     {
         method: "DELETE",
         headers: {

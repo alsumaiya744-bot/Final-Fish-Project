@@ -1,0 +1,1 @@
+const BASE_URL = "https://final-fish-project-production.up.railway.app";
