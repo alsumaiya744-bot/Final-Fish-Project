@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Management</title>
+
+    <link rel="stylesheet"
+          href="/fishsupplychainmanagement/src/main/resources/static/css/CustomerManagement.css">
+</head>
+<body>
+
+<div class="customer-page">
+
+    <!-- Header -->
+    <div class="page-header">
+
+        <button id="backBtn"
+                class="back-btn">
+            ← Dashboard
+        </button>
+
+        <h1>👥 Customer Management</h1>
+
+        <p>
+            View and manage registered customers
+        </p>
+
+    </div>
+
+    <div class="top-section">
+
+       
+        <div class="form-box">
+
+            <h2>Customer Details</h2>
+
+            <!-- Customer ID Dropdown -->
+            <div class="input-group">
+
+                <label>Customer ID</label>
+
+                <select id="customerId">
+
+                    <option value="">
+                        Select Customer ID
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Customer Name</label>
+
+                <input type="text"
+                       id="customerName"
+                       placeholder="Customer Name">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Phone Number</label>
+
+                <input type="text"
+                       id="phone"
+                       placeholder="Phone Number">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Email</label>
+
+                <input type="email"
+                       id="email"
+                       placeholder="Email">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Address</label>
+
+                <textarea
+                        id="address"
+                        placeholder="Address">
+                </textarea>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Customer Type</label>
+
+                <select id="customerType">
+
+                    <option value="">
+                        Select Type
+                    </option>
+
+                    <option value="RETAIL">
+                        Retail
+                    </option>
+
+                    <option value="HOTEL">
+                        Hotel
+                    </option>
+
+                    <option value="RESTAURANT">
+                        Restaurant
+                    </option>
+
+                    <option value="WHOLESALE">
+                        Wholesale
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="buttons">
+
+                <button
+                        type="button"
+                        id="updateBtn"
+                        class="update">
+
+                    Update
+
+                </button>
+
+                <button
+                        type="button"
+                        id="deleteBtn"
+                        class="delete">
+
+                    Delete
+
+                </button>
+
+            </div>
+
+        </div>
+
+       
+        <div class="list-box">
+
+            <div class="list-header">
+
+                <h2>
+                    Registered Customers
+                </h2>
+
+                <input type="text"
+                       id="search"
+                       placeholder="🔍 Search Customer">
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Name</th>
+
+                        <th>Phone</th>
+
+                        <th>Email</th>
+                        <th>Address</th>
+
+                        <th>Type</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="customerTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/adminAuth.js"></script>
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/CustomerManagement.js"></script>
+
+</body>
+</html>

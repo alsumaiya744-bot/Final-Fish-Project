@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="/fishsupplychainmanagement/src/main/resources/static/css/dashboard.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    
+
+    <div class="sidebar">
+
+        <h2>🐟 Fish SCM</h2>
+
+        <ul>
+            <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="Procurement.html">Procurement</a></li>
+            <li><a href="FishManagement.html">Fish Management</a></li>
+            <li><a href="CustomerManagement.html">Customer Management</a></li>
+            <li><a href="OrderManagement.html">Order Management</a></li>
+            <li><a href="Sales.html">Sales</a></li>
+            <li><a href="Delivery.html">Delivery</a></li>
+            
+            <li><a href="Expense.html">Expenses</a></li>
+            <li><a href="Report.html">Report</a></li>
+            <li>
+    <a href="#" onclick="logout()">
+        Logout
+    </a>
+</li>
+        </ul>
+
+    </div>
+
+   
+
+    <div class="main-content">
+
+        <div class="top-bar">
+
+            <h1>Fish Supply Chain Management System</h1>
+
+            <div class="profile">
+                👤
+            </div>
+
+        </div>
+
+       
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Fish Purchased</h3>
+                <p id="fishPurchased">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Expense</h3>
+                <p id="totalExpense">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Sales</h3>
+                <p id="totalSales">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Net Profit</h3>
+                <p id="netProfit">₹0</p>
+            </div>
+
+            <div class="card">
+    <h3>Total Orders</h3>
+    <p id="totalOrders">0</p>
+</div>
+
+<div class="card">
+    <h3>Total Customers</h3>
+    <p id="totalCustomers">0</p>
+</div>
+
+        </div>
+
+        <!-- Pie Chart -->
+
+        <div class="chart-box">
+
+            <h2>Expense Distribution</h2>
+
+            <canvas id="expenseChart"></canvas>
+
+        </div>
+
+        <div class="chart-box">
+
+    <h2>
+        Sales vs Expenses
+    </h2>
+
+    <canvas id="salesExpenseChart">
+
+    </canvas>
+
+</div>
+
+        
+
+        <div class="activity">
+
+            <h2>Recent Activity</h2>
+
+            <table>
+
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Activity</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+
+                <tbody id="activityTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/adminAuth.js"></script>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/dashboard.js"></script>
+
+</body>
+</html>

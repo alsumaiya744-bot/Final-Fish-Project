@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Management</title>
+
+    <link rel="stylesheet" href="/fishsupplychainmanagement/src/main/resources/static/css/Expense.css">
+</head>
+
+<body>
+
+    <div class="expense-page">
+
+        <!-- Header -->
+
+        <div class="page-header">
+
+            <a href="admin-dashboard.html"><button id="backBtn" class="back-btn">
+                    ← Dashboard
+                </button></a>
+
+            <h1>
+                💰 Expense Management
+            </h1>
+
+            <p>
+                Manage all business expenses.
+            </p>
+
+        </div>
+
+       
+
+        <div class="summary-cards">
+
+            <div class="summary-card">
+
+                <h3>Total Expenses</h3>
+
+                <p id="totalExpense">
+                    ₹0
+                </p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <h3>This Month</h3>
+
+                <p id="monthlyExpense">
+                    ₹0
+                </p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <h3>Today</h3>
+
+                <p id="todayExpense">
+                    ₹0
+                </p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <h3>Total Records</h3>
+
+                <p id="totalRecords">
+                    0
+                </p>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="form-box">
+
+            <h2>
+                Add Expense
+            </h2>
+
+            <div class="form-grid">
+
+                <input type="date" id="expenseDate">
+
+                <select id="expenseType">
+
+                    <option value="">
+                        Select Expense Type
+                    </option>
+
+                    <option value="ICE_PURCHASE">
+                        Ice Purchase
+                    </option>
+
+                    <option value="TRANSPORTATION">
+                        Transportation
+                    </option>
+
+                    <option value="WORKER_SALARY">
+                        Worker Salary
+                    </option>
+
+                    <option value="PACKAGING">
+                        Packaging
+                    </option>
+
+                    <option value="ELECTRICITY">
+                        Electricity
+                    </option>
+
+                    <option value="FUEL">
+                        Fuel
+                    </option>
+
+                    <option value="MAINTENANCE">
+                        Maintenance
+                    </option>
+
+                    <option value="OTHER">
+                        Other
+                    </option>
+
+                </select>
+
+                <input type="number" id="amount" placeholder="Amount">
+
+                <input type="text" id="description" placeholder="Description">
+
+            </div>
+
+            <button id="saveBtn">
+                Save Expense
+            </button>
+
+        </div>
+
+       
+
+        <div class="search-box">
+
+            <input type="text" id="search" placeholder="🔍 Search Expense">
+
+        </div>
+
+        
+
+        <div class="table-box">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Description</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="expenseTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+   
+
+    <div id="expenseModal" class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModal">
+                ×
+            </span>
+
+            <h2>
+                Edit Expense
+            </h2>
+
+            <input type="date" id="editDate">
+
+            <select id="editType">
+
+                <option value="ICE_PURCHASE">
+                    Ice Purchase
+                </option>
+
+                <option value="TRANSPORTATION">
+                    Transportation
+                </option>
+
+                <option value="WORKER_SALARY">
+                    Worker Salary
+                </option>
+
+                <option value="PACKAGING">
+                    Packaging
+                </option>
+
+                <option value="ELECTRICITY">
+                    Electricity
+                </option>
+
+                <option value="FUEL">
+                    Fuel
+                </option>
+
+                <option value="MAINTENANCE">
+                    Maintenance
+                </option>
+
+                <option value="OTHER">
+                    Other
+                </option>
+
+            </select>
+
+            <input type="number" id="editAmount">
+
+            <input type="text" id="editDescription">
+
+            <button id="updateBtn">
+                Update Expense
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="/fishsupplychainmanagement/src/main/resources/static/js/adminAuth.js"></script>
+
+    <script src="/fishsupplychainmanagement/src/main/resources/static/js/Expense.js"></script>
+
+</body>
+
+</html>

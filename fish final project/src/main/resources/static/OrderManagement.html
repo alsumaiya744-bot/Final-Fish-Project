@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Management</title>
+    <link rel="stylesheet" href="/fishsupplychainmanagement/src/main/resources/static/css/OrderManagement.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <button id="backBtn">
+            ← Dashboard
+        </button>
+
+        <h1>
+            📦 Order Management
+        </h1>
+
+    </div>
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+            <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Customer</th>
+                <th>Amount</th>
+                <th>Payment</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+            </thead>
+
+            <tbody id="orderTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-- Modal -->
+
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeBtn">
+            ×
+        </span>
+
+        <h2>
+            Order Details
+        </h2>
+
+        <h2>Order Details</h2>
+
+<div id="orderDetails">
+
+</div>
+
+        <br>
+
+        <label>
+            Order Status
+        </label>
+
+        <select id="status">
+
+            <option value="PROCESSING">
+                PROCESSING
+            </option>
+
+            <option value="ACCEPTED">
+                ACCEPTED
+            </option>
+
+            <option value="PACKED">
+                PACKED
+            </option>
+
+            <option value="OUT_FOR_DELIVERY">
+                OUT FOR DELIVERY
+            </option>
+
+            <option value="DELIVERED">
+                DELIVERED
+            </option>
+
+            <option value="CANCELLED">
+                CANCELLED
+            </option>
+
+        </select>
+<button
+        id="updateBtn"
+       >
+    Update Status
+</button>
+
+    </div>
+
+</div>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/adminAuth.js"></script>
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/OrderManagement.js"></script>
+
+</body>
+</html>

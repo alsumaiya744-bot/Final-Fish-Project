@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Cart</title>
+
+    <link rel="stylesheet"
+          href="/fishsupplychainmanagement/src/main/resources/static/css/UserCart.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        🐟 Fish SCM
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="UserHome.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="UserFishCatalog.html">
+                Fish Catalog
+            </a>
+        </li>
+
+        <li>
+            <a href="UserCart.html"
+               class="active">
+                Cart
+            </a>
+        </li>
+
+        <li>
+            <a href="UserMyOrder.html">
+                My Orders
+            </a>
+        </li>
+
+        <li>
+            <a href="login.html">
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<div class="container">
+
+    <div class="page-header">
+
+        <h1>
+            🛒 My Cart
+        </h1>
+
+        <p>
+            Review your selected seafood items.
+        </p>
+
+    </div>
+
+    <!-- Cart Items -->
+
+    <div id="cartItems">
+
+    </div>
+
+    <!-- Empty Cart -->
+
+    <div id="emptyCart"
+         class="empty-cart"
+         style="display:none;">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <h2>
+            Your Cart Is Empty
+        </h2>
+
+        <a href="UserFishCatalog.html">
+
+            Shop Now
+
+        </a>
+
+    </div>
+
+    <!-- Cart Summary -->
+
+    <div class="summary-box">
+
+        <h2>
+            Cart Summary
+        </h2>
+
+        <div class="summary-item">
+
+            <span>
+                Total Items
+            </span>
+
+            <span id="totalItems">
+                0
+            </span>
+
+        </div>
+
+        <div class="summary-item">
+
+            <span>
+                Total Quantity
+            </span>
+
+            <span id="totalQty">
+                0 Kg
+            </span>
+
+        </div>
+
+        <div class="summary-item">
+    <span>Subtotal</span>
+    <span id="subTotal">₹0</span>
+</div>
+
+<div class="summary-item">
+    <span>GST (5%)</span>
+    <span id="gst">₹0</span>
+</div>
+
+<div class="summary-item">
+    <span>Handling Charge</span>
+    <span id="packingCharge">₹30</span>
+</div>
+
+<div class="summary-item">
+    <span>Cold Storage Charge</span>
+    <span id="storageCharge">₹50</span>
+</div>
+
+<div class="summary-item">
+    <span>Delivery Charge</span>
+    <span id="deliveryCharge">₹100</span>
+</div>
+
+<hr>
+
+<div class="summary-item grand-total">
+    <strong>Grand Total</strong>
+    <strong id="grandTotal">₹0</strong>
+</div>
+
+        <div class="buttons">
+
+            <a href="UserFishCatalog.html"
+               class="continue-btn">
+
+                Continue Shopping
+
+            </a>
+
+            <a href="UserCheckout.html"
+               class="checkout-btn">
+
+                Proceed To Checkout
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/auth.js"></script>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/UserCart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile</title>
+
+    <link rel="stylesheet"
+          href="/fishsupplychainmanagement/src/main/resources/static/css/UserProfile.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="profile-page">
+
+    <div class="page-header">
+
+       <a href="UserHome.html"> <button id="backBtn"
+                class="back-btn">
+            ← Home
+        </button></a>
+
+        <h1>
+            👤 My Profile
+        </h1>
+
+        <p>
+            Manage your personal information
+        </p>
+
+    </div>
+
+    <div class="profile-card">
+
+        <div class="profile-left">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                 id="profilePreview">
+
+            <input type="file"
+                   id="profileImage"
+                   accept="image/*">
+
+        </div>
+
+        <div class="profile-right">
+
+            <div class="input-group">
+
+                <label>Customer ID</label>
+
+                <input type="text"
+                       id="customerId"
+                       readonly>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Full Name</label>
+
+                <input type="text"
+                       id="name">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Email</label>
+
+                <input type="email"
+                       id="email"
+                       readonly>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Phone Number</label>
+
+                <input type="text"
+                       id="phone">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Address</label>
+
+                <textarea id="address"></textarea>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Joined Date</label>
+
+                <input type="text"
+                       id="joinedDate"
+                       readonly>
+
+            </div>
+
+            <button id="saveBtn">
+
+                Save Changes
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/UserProfile.js"></script>
+
+</body>
+</html>

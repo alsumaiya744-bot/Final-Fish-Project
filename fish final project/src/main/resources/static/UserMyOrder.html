@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders</title>
+
+    <link rel="stylesheet"
+          href="/fishsupplychainmanagement/src/main/resources/static/css/UserMyOrder.css">
+</head>
+<body>
+
+<div class="orders-page">
+
+    <!-- Header -->
+
+    <div class="page-header">
+
+       <a href="UserHome.html"> <button id="backBtn"
+                class="back-btn">
+            ← Home
+        </button></a>
+
+        <h1>
+            📦 My Orders
+        </h1>
+
+        <p>
+            Track your orders and delivery status.
+        </p>
+
+    </div>
+
+    <!-- Summary Cards -->
+
+    <div class="summary-cards">
+
+        <div class="summary-card">
+            <h3>Total Orders</h3>
+            <p id="totalOrders">0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Processing</h3>
+            <p id="processingOrders">0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Delivered</h3>
+            <p id="deliveredOrders">0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Cancelled</h3>
+            <p id="cancelledOrders">0</p>
+        </div>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="search-box">
+
+        <input type="text"
+               id="search"
+               placeholder="🔍 Search Order">
+
+    </div>
+
+    <!-- Orders -->
+
+    <div id="ordersContainer">
+
+    </div>
+
+    <!-- Modal -->
+
+    <div id="orderModal"
+         class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModal">
+                ×
+            </span>
+
+            <h2>
+                Order Details
+            </h2>
+
+            <div id="orderDetails">
+
+            </div>
+
+            <button id="cancelBtn">
+
+                Cancel Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/auth.js"></script>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/UserMyOrder.js"></script>
+
+</body>
+</html>

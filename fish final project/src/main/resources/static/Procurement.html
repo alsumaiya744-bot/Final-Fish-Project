@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Procurement Management</title>
+
+    <link rel="stylesheet"
+          href="/fishsupplychainmanagement/src/main/resources/static/css/Procurement.css">
+</head>
+<body>
+
+<div class="procurement-page">
+
+    <!-- Header -->
+
+    <div class="page-header">
+
+       <a href="admin-dashboard.html"> <button id="backBtn"
+                class="back-btn">
+            ← Dashboard
+        </button></a>
+
+        <h1>🐟 Procurement Management</h1>
+
+        <p>
+            Manage Fish Purchases and Suppliers
+        </p>
+
+    </div>
+
+    <div class="top-section">
+
+        <!-- Form Section -->
+
+        <div class="form-box">
+
+            <h2>Purchase Details</h2>
+
+            <div class="input-group">
+
+                <label>Procurement ID</label>
+
+                <select id="procurementId">
+    <option value="">
+        Select Procurement ID
+    </option>
+</select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Date</label>
+
+                <input type="date"
+                       id="date">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Supplier Name</label>
+
+                <input type="text"
+                       id="supplierName"
+                       placeholder="Supplier Name">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Supplier Phone</label>
+
+                <input type="text"
+                       id="supplierPhone"
+                       placeholder="Phone Number">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Fish ID</label>
+
+                <select id="fishId">
+
+                    <option value="">
+                        Select Fish ID
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Fish Name</label>
+
+                <input type="text"
+                       id="fishName"
+                       >
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Category</label>
+
+                <select id="category">
+    <option value="">Select Category</option>
+    <option value="Fresh Water">Fresh Water</option>
+    <option value="Salt Water">Salt Water</option>
+</select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Purchase Price Per Kg</label>
+
+<input
+       type="number"
+       id="purchasePrice"
+       placeholder="Purchase Price">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Available Stock</label>
+
+                <input type="number"
+                       id="stock"
+                      >
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Purchase Quantity</label>
+
+                <input type="number"
+                       id="quantity"
+                       placeholder="Quantity">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Total Amount</label>
+
+                <input type="number"
+                       id="total"
+                       readonly>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Payment Status</label>
+
+                <select id="paymentStatus">
+    <option value="">Select Status</option>
+    <option value="PAID">Paid</option>
+    <option value="PENDING">Pending</option>
+</select>
+
+            </div>
+
+            <div class="buttons">
+
+                <button id="addBtn"
+                        class="add">
+                    Add
+                </button>
+
+                <button id="updateBtn"
+                        class="update">
+                    Update
+                </button>
+
+                <button id="deleteBtn"
+                        class="delete">
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Summary Section -->
+
+        <div class="summary-box">
+
+            <h2>Today's Procurement</h2>
+
+            <div class="summary-card">
+
+                <h3>Total Purchase</h3>
+
+                <p id="purchaseAmount">
+                    ₹0
+                </p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <h3>Total Quantity</h3>
+
+                <p id="purchaseQty">
+                    0 Kg
+                </p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <h3>Total Orders</h3>
+
+                <p id="totalOrders">
+                    0
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Table -->
+
+    <div class="table-box">
+
+        <div class="table-header">
+
+            <h2>Procurement History</h2>
+
+            <input type="text"
+                   id="search"
+                   placeholder="🔍 Search Procurement">
+
+        </div>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Date</th>
+                <th>Supplier</th>
+                <th>Fish</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Status</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="procurementTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/adminAuth.js"></script>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/Procurement.js"></script>
+
+</body>
+</html>

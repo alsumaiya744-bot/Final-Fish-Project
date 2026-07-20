@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Delivery Management</title>
+
+    <link rel="stylesheet"
+          href="/fishsupplychainmanagement/src/main/resources/static/css/Delivery.css">
+</head>
+<body>
+
+<div class="delivery-page">
+
+    <!-- Header -->
+
+    <div class="page-header">
+
+        <button id="backBtn"
+                class="back-btn">
+            ← Dashboard
+        </button>
+
+        <h1>
+            🚚 Delivery Management
+        </h1>
+
+        <p>
+            Manage customer deliveries and update order status.
+        </p>
+
+    </div>
+
+   
+
+    <div class="summary-cards">
+
+        <div class="summary-card">
+
+            <h3>Total Deliveries</h3>
+
+            <p id="totalDeliveries">
+                0
+            </p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <h3>Pending</h3>
+
+            <p id="pendingDeliveries">
+                0
+            </p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <h3>Delivered</h3>
+
+            <p id="deliveredOrders">
+                0
+            </p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <h3>Cancelled</h3>
+
+            <p id="cancelledOrders">
+                0
+            </p>
+
+        </div>
+
+    </div>
+
+   
+
+    <div class="table-box">
+
+        <div class="table-header">
+
+            <h2>
+                Delivery Orders
+            </h2>
+
+            <input type="text"
+                   id="search"
+                   placeholder="🔍 Search Order">
+
+        </div>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>Delivery ID</th>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Phone</th>
+                <th>Payment</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="deliveryTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+   
+
+    <div id="deliveryModal"
+         class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModal">
+                ×
+            </span>
+
+            <h2>
+                Delivery Details
+            </h2>
+
+            <div id="deliveryDetails">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Update Status
+                </label>
+
+                <select id="status">
+
+                    <option value="ACCEPTED">
+        ACCEPTED
+    </option>
+
+    <option value="PACKED">
+        PACKED
+    </option>
+
+    <option value="OUT_FOR_DELIVERY">
+        OUT FOR DELIVERY
+    </option>
+
+    <option value="DELIVERED">
+        DELIVERED
+    </option>
+
+                </select>
+
+            </div>
+
+            <button id="updateBtn">
+
+                Update Status
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/adminAuth.js"></script>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/Delivery.js"></script>
+
+</body>
+</html>

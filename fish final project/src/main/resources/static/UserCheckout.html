@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout</title>
+
+    <link rel="stylesheet"
+          href="/fishsupplychainmanagement/src/main/resources/static/css/UserCheckout.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🐟 Fish SCM
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="UserHome.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="UserFishCatalog.html">
+                Fish Catalog
+            </a>
+        </li>
+
+        <li>
+            <a href="UserCart.html">
+                Cart
+            </a>
+        </li>
+
+        <li>
+            <a href="UserMyOrder.html">
+                My Orders
+            </a>
+        </li>
+
+        <li>
+            <a href="#"
+   onclick="logout()">
+    Logout
+</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<div class="container">
+
+    <div class="page-header">
+
+        <h1>
+            💳 Checkout
+        </h1>
+
+        <p>
+            Confirm your order and payment.
+        </p>
+
+    </div>
+
+    <div class="checkout-section">
+
+        <!-- Customer Details -->
+
+        <div class="customer-box">
+
+            <h2>
+                Customer Details
+            </h2>
+
+            <div class="input-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input type="text"
+                       id="customerName"
+                       readonly>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input type="text"
+                       id="phone"
+                       >
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Email
+                </label>
+
+                <input type="email"
+                       id="email"
+                       readonly>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Delivery Address
+                </label>
+
+                <textarea
+                    id="address"
+                    placeholder=
+                    "Enter Delivery Address">
+                </textarea>
+
+            </div>
+
+        </div>
+
+        <!-- Order Summary -->
+
+        <div class="summary-box">
+
+            <h2>
+                Order Summary
+            </h2>
+
+            <div id="orderItems">
+
+            </div>
+
+            <hr>
+
+            <div class="summary-row">
+
+                <span>
+                    Total Quantity
+                </span>
+
+                <span id="totalQty">
+                    0 Kg
+                </span>
+
+            </div>
+
+            <div class="summary-row">
+    <span>Subtotal</span>
+    <span id="subTotal">₹0</span>
+</div>
+
+<div class="summary-row">
+    <span>GST (5%)</span>
+    <span id="gst">₹0</span>
+</div>
+
+<div class="summary-row">
+    <span>Handling Charge</span>
+    <span id="handling">₹30</span>
+</div>
+
+<div class="summary-row">
+    <span>Cold Storage Charge</span>
+    <span id="storage">₹50</span>
+</div>
+
+<div class="summary-row">
+    <span>Delivery Charge</span>
+    <span id="delivery">₹100</span>
+</div>
+
+<hr>
+
+<div class="summary-row">
+    <strong>Grand Total</strong>
+    <strong id="grandTotal">₹0</strong>
+</div>
+
+        </div>
+
+    </div>
+
+    <!-- Payment -->
+
+    <div class="payment-box">
+
+        <h2>
+            Payment Method
+        </h2>
+
+        <div class="payment-options">
+
+            <label>
+
+                <input type="radio"
+                       name="payment"
+                       value="UPI">
+
+                UPI
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                       name="payment"
+                       value="Cash on Delivery">
+
+                Cash On Delivery
+
+            </label>
+
+        </div>
+
+        <!-- UPI Apps -->
+
+        <div id="upiOptions"
+             style="display:none;">
+
+            <label>
+
+                <input type="radio"
+                       name="upi"
+                       value="Google Pay">
+
+                Google Pay
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                       name="upi"
+                       value="PhonePe">
+
+                PhonePe
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                       name="upi"
+                       value="Paytm">
+
+                Paytm
+
+            </label>
+
+        </div>
+
+        <div class="status">
+
+            Payment Status :
+
+            <span id="paymentStatus">
+                Pending
+            </span>
+
+        </div>
+
+        <div class="buttons">
+
+            <button id="backBtn">
+
+                Back To Cart
+
+            </button>
+
+            <button id="placeOrderBtn">
+    Pay & Place Order
+</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/auth.js"></script>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/UserCheckout.js"></script>
+
+</body>
+</html>

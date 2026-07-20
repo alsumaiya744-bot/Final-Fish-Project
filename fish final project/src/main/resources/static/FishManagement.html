@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Management</title>
+    <link rel="stylesheet" href="/fishsupplychainmanagement/src/main/resources/static/css/FishManagement.css">
+</head>
+
+<body>
+
+    <div class="fish-page">
+
+        <div class="page-header">
+
+            <button id="backBtn" class="back-btn">
+                ← Back to Dashboard
+            </button>
+
+            <h1>🐟 Fish Management</h1>
+            <p>Manage Fish Stock and Catalog</p>
+
+        </div>
+
+        
+        <div class="top-section">
+
+           
+            <div class="form-box">
+
+                <h2>Add / Update Fish</h2>
+
+                <div class="input-group">
+                    <label>Fish ID</label>
+                    <select id="fishId">
+                        <option value="">
+                            New Fish
+                        </option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Fish Name</label>
+
+                    
+                    <input type="text" id="fishName" placeholder="Enter Fish Name">
+                </div>
+
+                <div class="input-group">
+                    <label>Category</label>
+                    <input type="text" id="category" placeholder="Category">
+                </div>
+
+                <div class="input-group">
+                    <label>Purchase Price Per Kg</label>
+
+                    <input type="number" id="purchasePrice" placeholder="Purchase Price" readonly>
+                </div>
+
+                <div class="input-group">
+                    <label>Selling Price Per Kg</label>
+
+                    <input type="number" id="sellingPrice" placeholder="Selling Price">
+                </div>
+                <div class="input-group">
+                    <label>Quantity (Kg)</label>
+                    <input type="number" id="quantity" placeholder="Enter Quantity">
+                </div>
+
+                <div class="input-group">
+                    <label>Storage Type</label>
+
+                    <select id="storage">
+                        <option value="">Select Storage</option>
+                        <option>Cold Storage</option>
+                        <option>Ice Storage</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Fish Image</label>
+                    <input type="file" id="image" accept="image/*">
+                </div>
+
+                <div class="buttons">
+
+                    <button id="addBtn" class="add">
+                        Add
+                    </button>
+
+                    <button id="updateBtn" class="update">
+                        Update
+                    </button>
+
+                    <button id="deleteBtn" class="delete">
+                        Delete
+                    </button>
+
+                </div>
+
+            </div>
+
+            
+            <div class="catalog">
+
+                <div class="catalog-header">
+
+                    <h2>Fish Catalog</h2>
+
+                    <input type="text" id="search" placeholder="🔍 Search Fish">
+
+                </div>
+
+                <div class="cards" id="fishCards">
+
+                   
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="table-box">
+
+            <h2>Stock List</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Fish ID</th>
+                            <th>Fish Name</th>
+                            <th>Category</th>
+                            <th>Selling Price</th>
+                            <th>Quantity</th>
+                            <th>Storage</th>
+                            <th>Status</th>
+                            <th>Image</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="fishTable">
+
+                        <!-- Dynamic Rows -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/fishsupplychainmanagement/src/main/resources/static/js/adminAuth.js"></script>
+
+    <script src="/fishsupplychainmanagement/src/main/resources/static/js/FishManagement.js"></script>
+
+</body>
+
+</html>

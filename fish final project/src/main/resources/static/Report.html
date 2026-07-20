@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Business Report</title>
+
+    <link rel="stylesheet"
+          href="/fishsupplychainmanagement/src/main/resources/static/css/Report.css">
+</head>
+<body>
+
+<div class="report-page">
+
+    <div class="page-header">
+
+        <a href="admin-dashboard.html"><button id="backBtn"
+                class="back-btn">
+            ← Dashboard
+        </button></a>
+
+        <h1>📊 Business Report</h1>
+
+        <p>
+            View sales, procurement and expenses.
+        </p>
+
+    </div>
+
+    <div class="filter-box">
+
+        <div class="input-group">
+
+            <label>
+                Start Date
+            </label>
+
+            <input type="date"
+                   id="startDate">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>
+                End Date
+            </label>
+
+            <input type="date"
+                   id="endDate">
+
+        </div>
+
+        <button id="generateBtn">
+            Generate Report
+        </button>
+
+        <button id="pdfBtn">
+            Download PDF
+        </button>
+
+    </div>
+
+    <div class="summary-cards">
+
+        <div class="card">
+
+            <h3>Total Sales</h3>
+
+            <p id="totalSales">
+                ₹0
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Total Procurement</h3>
+
+            <p id="totalProcurement">
+                ₹0
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Total Expenses</h3>
+
+            <p id="totalExpenses">
+                ₹0
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Profit / Loss</h3>
+
+            <p id="profit">
+                ₹0
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/adminAuth.js"></script>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/Report.js"></script>
+
+</body>
+</html>

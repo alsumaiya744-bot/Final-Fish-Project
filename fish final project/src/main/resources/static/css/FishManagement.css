@@ -1,0 +1,308 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background:#f4f7fc;
+}
+
+.fish-page{
+    padding:30px;
+}
+
+
+.back-btn{
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    margin-bottom:20px;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#0b5ed7;
+}
+/* Header */
+
+.page-header{
+    margin-bottom:30px;
+}
+
+.page-header h1{
+    color:#0d6efd;
+    margin-bottom:5px;
+    font-size:35px;
+}
+
+.page-header p{
+    color:#666;
+    font-size:16px;
+}
+
+/* Top Section */
+
+.top-section{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+/* Form */
+
+.form-box{
+    width:400px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.form-box h2{
+    margin-bottom:25px;
+    color:#333;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    color:#444;
+    font-weight:600;
+}
+
+.form-box input,
+.form-box select{
+    width:100%;
+    height:50px;
+    padding:0 15px;
+    border:1px solid #dcdcdc;
+    border-radius:12px;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+.form-box input:focus,
+.form-box select:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 8px rgba(13,110,253,0.25);
+}
+
+/* File Input */
+
+#image{
+    padding:12px;
+    height:auto;
+}
+
+/* Buttons */
+
+.buttons{
+    display:flex;
+    gap:12px;
+    margin-top:30px;
+}
+
+.buttons button{
+    flex:1;
+    border:none;
+    height:45px;
+    border-radius:12px;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.buttons button:hover{
+    transform:translateY(-2px);
+}
+
+.add{
+    background:#0d6efd;
+}
+
+.update{
+    background:#28a745;
+}
+
+.delete{
+    background:#dc3545;
+}
+
+/* Catalog */
+
+.catalog{
+    flex:1;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    min-height:700px;
+}
+
+.catalog-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.catalog-header h2{
+    color:#333;
+}
+
+#search{
+    width:280px;
+    height:45px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding-left:15px;
+    outline:none;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fill,minmax(220px,1fr));
+    gap:25px;
+}
+
+.fish-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.fish-card:hover{
+    transform:translateY(-5px);
+}
+
+.fish-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.fish-card-body{
+    padding:15px;
+}
+
+.fish-card-body h3{
+    color:#0d6efd;
+    margin-bottom:8px;
+}
+
+.fish-card-body p{
+    color:#555;
+    margin-bottom:5px;
+}
+
+/* Table */
+
+.table-box{
+    margin-top:35px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.table-box h2{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#0d6efd;
+    color:white;
+}
+
+th,
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+tbody tr:hover{
+    background:#f5f9ff;
+}
+
+/* Status */
+
+.green{
+    color:green;
+    font-weight:bold;
+}
+
+.orange{
+    color:orange;
+    font-weight:bold;
+}
+
+.red{
+    color:red;
+    font-weight:bold;
+}
+
+/* Table Image */
+
+.table-image{
+    width:60px;
+    height:60px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+    .top-section{
+        flex-direction:column;
+    }
+
+    .form-box{
+        width:100%;
+    }
+
+    .catalog{
+        width:100%;
+    }
+
+    .catalog-header{
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+
+    #search{
+        width:100%;
+    }
+}

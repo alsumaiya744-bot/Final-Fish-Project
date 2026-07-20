@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sales Management</title>
+
+    <link rel="stylesheet"
+          href="/fishsupplychainmanagement/src/main/resources/static/css/Sales.css">
+</head>
+<body>
+
+<div class="sales-page">
+
+    <!-- Header -->
+
+    <div class="page-header">
+
+        <button id="backBtn"
+                class="back-btn">
+            ← Dashboard
+        </button>
+
+        <h1>💰 Sales Management</h1>
+
+        <p>
+            View Customer Orders and Sales
+        </p>
+
+    </div>
+
+    <!-- Summary Cards -->
+
+    <div class="summary-cards">
+
+        <div class="summary-card">
+
+            <h3>Total Revenue</h3>
+
+            <p id="revenue">
+                ₹0
+            </p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <h3>Total Quantity Sold</h3>
+
+            <p id="quantitySold">
+                0 Kg
+            </p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <h3>Total Orders</h3>
+
+            <p id="orders">
+                0
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Sales Table -->
+
+    <div class="table-box">
+
+        <div class="table-header">
+
+            <h2>
+                Sales History
+            </h2>
+
+            <input type="text"
+                   id="search"
+                   placeholder="🔍 Search Sale">
+
+        </div>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>Sales ID</th>
+                <th>Date</th>
+                <th>Customer</th>
+                <th>Fish</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Payment</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="salesTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- View Details Modal -->
+
+    <div id="saleModal"
+         class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModal">
+                ×
+            </span>
+
+            <h2>
+                Sale Details
+            </h2>
+
+            <div id="saleDetails">
+
+            </div>
+
+            <button id="deliveryBtn">
+
+                Open Delivery
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/adminAuth.js"></script>
+
+<script src="/fishsupplychainmanagement/src/main/resources/static/js/Sales.js"></script>
+
+</body>
+</html>
