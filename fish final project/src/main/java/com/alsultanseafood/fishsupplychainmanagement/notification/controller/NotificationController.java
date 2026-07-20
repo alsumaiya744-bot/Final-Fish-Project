@@ -10,7 +10,7 @@ import com.alsultanseafood.fishsupplychainmanagement.notification.service.Notifi
 
 @RestController
 @RequestMapping("/api/notifications")
-@CrossOrigin("*")
+
 public class NotificationController {
 
     private final NotificationService service;

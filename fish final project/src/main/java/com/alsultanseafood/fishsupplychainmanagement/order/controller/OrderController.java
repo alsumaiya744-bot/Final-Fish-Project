@@ -12,7 +12,7 @@ import com.alsultanseafood.fishsupplychainmanagement.order.service.OrderService;
 
 @RestController
 @RequestMapping("/api/orders")
-@CrossOrigin("*")
+
 public class OrderController {
 
     private final OrderService orderService;

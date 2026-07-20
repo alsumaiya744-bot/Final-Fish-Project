@@ -16,7 +16,7 @@ import java.nio.file.*;
 
 @RestController
 @RequestMapping("/api/fishes")
-@CrossOrigin(origins = "http://127.0.0.1:5500")
+
 public class FishController {
 
     private final FishService fishService;

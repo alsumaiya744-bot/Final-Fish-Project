@@ -17,7 +17,7 @@ import com.alsultanseafood
 
 @RestController
 @RequestMapping("/api/reports")
-@CrossOrigin("*")
+
 public class ReportController {
 
     private final ReportService
