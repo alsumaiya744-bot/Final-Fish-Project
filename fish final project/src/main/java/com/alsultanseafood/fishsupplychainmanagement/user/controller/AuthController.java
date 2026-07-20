@@ -52,36 +52,33 @@ public AuthController(
 
     // ================= Login =================
 
-//     @PostMapping("/login")
-// public LoginResponse login(
-//         @RequestBody LoginRequest request) {
+    @PostMapping("/login")
+public LoginResponse login(
+        @RequestBody LoginRequest request) {
 
-//     String token =
-//             userService.login(
-//                     request.getEmail(),
-//                     request.getPassword(),
-//                     request.getRole());
+    String token =
+            userService.login(
+                    request.getEmail(),
+                    request.getPassword(),
+                    request.getRole());
 
-//     User user =
-//             userRepository
-//                     .findByEmail(
-//                             request.getEmail())
-//                     .orElseThrow();
+    User user =
+            userRepository
+                    .findByEmail(
+                            request.getEmail())
+                    .orElseThrow();
 
-//     return new LoginResponse(
-//             token,
-//             user.getRole(),
-//             user.getUserId(),
-//             user.getFullName(),
-//             user.getEmail(),
-//         user.getPhoneNumber(),
-//         user.getAddress()
-//     );
-// }
-
-
-@PostMapping("/login")
-public String testLogin() {
-    return "Login API Working";
+    return new LoginResponse(
+            token,
+            user.getRole(),
+            user.getUserId(),
+            user.getFullName(),
+            user.getEmail(),
+        user.getPhoneNumber(),
+        user.getAddress()
+    );
 }
+
+
+
 }
