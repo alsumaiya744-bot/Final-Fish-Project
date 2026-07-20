@@ -5,7 +5,7 @@ async function loadDashboard(){
 
     const response =
     await fetch(
-        "${BASE_URL}/api/dashboard",
+        `${BASE_URL}/api/dashboard`,
         {
             headers: {
                 Authorization:
@@ -70,7 +70,7 @@ async function loadExpenseChart(){
 
     const response =
     await fetch(
-        "${BASE_URL}/api/dashboard/expense-chart",
+        `${BASE_URL}/api/dashboard/expense-chart`,
         {
             headers: {
                 Authorization:
@@ -115,7 +115,7 @@ async function loadSalesExpenseChart(){
 
    const response =
     await fetch(
-        "${BASE_URL}/api/dashboard",
+        `${BASE_URL}/api/dashboard`,
         {
             headers: {
                 Authorization:
@@ -163,7 +163,7 @@ async function loadActivities() {
 
     const response =
     await fetch(
-        "${BASE_URL}/api/dashboard/activities",
+        `${BASE_URL}/api/dashboard/activities`,
         {
             headers: {
                 Authorization:

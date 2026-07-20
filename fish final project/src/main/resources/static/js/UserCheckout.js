@@ -325,7 +325,7 @@ let grandTotal =
 };
     const response =
         await fetch(
-            "${BASE_URL}/api/orders",
+            `${BASE_URL}/api/orders`,
             {
                 method:
                     "POST",

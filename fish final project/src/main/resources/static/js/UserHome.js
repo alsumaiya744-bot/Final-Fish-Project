@@ -231,7 +231,7 @@ async function addToCart(fishId) {
 
         const response =
             await fetch(
-                "${BASE_URL}/api/cart",
+                `${BASE_URL}/api/cart`,
                 {
                     method: "POST",
 

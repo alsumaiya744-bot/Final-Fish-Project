@@ -15,7 +15,7 @@ async function loadOrders() {
 
         const response =
             await fetch(
-                "${BASE_URL}/api/orders",
+                `${BASE_URL}/api/orders`,
                 {
                     headers: {
                         Authorization:

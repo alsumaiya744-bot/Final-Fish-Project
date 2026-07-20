@@ -11,7 +11,7 @@ async function loadFishes() {
 
         const response =
     await fetch(
-        "${BASE_URL}/api/fishes",
+        `${BASE_URL}/api/fishes`,
         {
             headers: {
                 Authorization:

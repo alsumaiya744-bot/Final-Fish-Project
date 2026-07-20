@@ -11,7 +11,7 @@ async function loadFishes() {
 
         const response =
     await fetch(
-        "${BASE_URL}/api/fishes",
+        `${BASE_URL}/api/fishes`,
         {
             headers: {
                 Authorization:
@@ -347,7 +347,7 @@ async function addToCart(fishId) {
 
         const response =
             await fetch(
-                "${BASE_URL}/api/cart",
+                `${BASE_URL}/api/cart`,
                 {
                     method: "POST",
 

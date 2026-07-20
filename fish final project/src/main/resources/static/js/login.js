@@ -119,7 +119,7 @@ async function loginUser(
 
         const response =
             await fetch(
-                "${BASE_URL}/api/auth/login",
+                `${BASE_URL}/api/auth/login`,
                 {
                     method:
                         "POST",

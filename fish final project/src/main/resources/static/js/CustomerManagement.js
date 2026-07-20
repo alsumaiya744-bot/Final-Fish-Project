@@ -11,7 +11,7 @@ async function loadCustomers() {
 
         const response =
     await fetch(
-        "${BASE_URL}/api/customers",
+        `${BASE_URL}/api/customers`,
         {
             headers: {
                 Authorization:

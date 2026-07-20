@@ -11,7 +11,7 @@ async function loadExpenses() {
 
    const response =
     await fetch(
-        "${BASE_URL}/api/expenses",
+        `${BASE_URL}/api/expenses`,
         {
             headers: {
                 Authorization:
@@ -129,7 +129,7 @@ async function saveExpense() {
 
     const response =
         await fetch(
-            "${BASE_URL}/api/expenses",
+            `${BASE_URL}/api/expenses`,
             {
                 method: "POST",
 

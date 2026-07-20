@@ -17,7 +17,7 @@ async function loadFishIds() {
 
         const response =
     await fetch(
-        "${BASE_URL}/api/fishes",
+        `${BASE_URL}/api/fishes`,
         {
             headers: {
                 Authorization:
@@ -59,7 +59,7 @@ async function loadProcurements() {
 
         const response =
     await fetch(
-        "${BASE_URL}/api/procurements",
+        `${BASE_URL}/api/procurements`,
         {
             headers: {
                 Authorization:
@@ -408,7 +408,7 @@ sellingPrice:
 
         const response =
             await fetch(
-                "${BASE_URL}/api/procurements",
+                `${BASE_URL}/api/procurements`,
                 {
                     method: "POST",
                      headers: {
