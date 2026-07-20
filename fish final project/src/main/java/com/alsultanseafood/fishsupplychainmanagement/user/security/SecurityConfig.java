@@ -157,25 +157,20 @@ public AuthenticationProvider authenticationProvider(
 
 
     @Bean
-public CorsConfigurationSource
-corsConfigurationSource() {
+public CorsConfigurationSource corsConfigurationSource() {
 
-    CorsConfiguration config =
-            new CorsConfiguration();
+    CorsConfiguration config = new CorsConfiguration();
 
-   config.addAllowedOrigin("https://al-sultan-seafood.netlify.app");
+    config.addAllowedOrigin("https://al-sultan-seafood.netlify.app");
 config.addAllowedOrigin("http://127.0.0.1:5500");
-
     config.addAllowedMethod("*");
-
     config.addAllowedHeader("*");
+    config.setAllowCredentials(true);
 
     UrlBasedCorsConfigurationSource source =
             new UrlBasedCorsConfigurationSource();
 
-    source.registerCorsConfiguration(
-            "/**",
-            config);
+    source.registerCorsConfiguration("/**", config);
 
     return source;
 }
