@@ -328,7 +328,7 @@ sellingPrice:
 
             const fishResponse =
                 await fetch(
-                    "${BASE_URL}/api/fishes/simple",
+                    `${BASE_URL}/api/fishes/simple`,
                     {
                         method: "POST",
                         headers: {
