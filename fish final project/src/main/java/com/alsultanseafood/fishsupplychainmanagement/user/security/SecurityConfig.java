@@ -163,8 +163,8 @@ corsConfigurationSource() {
     CorsConfiguration config =
             new CorsConfiguration();
 
-    config.addAllowedOrigin(
-            "http://127.0.0.1:5500");
+   config.addAllowedOrigin("https://al-sultan-seafood.netlify.app");
+config.addAllowedOrigin("http://127.0.0.1:5500");
 
     config.addAllowedMethod("*");
 
